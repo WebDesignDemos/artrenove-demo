@@ -25,7 +25,7 @@ import heroImage from "@assets/images/hero/hero.jpg";
 const optimizedHeroImage = await getImage({ src: heroImage, format: "webp" });
 ---
 
-<BaseLayout title="Premusi Pré Moldados" description="Meta description for the page" heroImage={optimizedHeroImage}>
+<BaseLayout title="Móveis planejados sob medida" description={SITE.description} heroImage={optimizedHeroImage}>
 	<Hero image={optimizedHeroImage} />
 	<SideBySide />    <!-- services -->
 	<Beneficios />    <!-- Beneficios -->

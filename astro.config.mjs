@@ -22,7 +22,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   // update me!
   site: "https://webdesigndemos.github.io",
-  base: "/artrenove-demo",
+  //base: "/artrenove-demo",
 
   integrations: [
       icon(),

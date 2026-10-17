@@ -6,36 +6,36 @@
   },
   {
     "key": "Sobre",
-    "url": "/blog",
+    "url": "/about",
     "children": []
   },
   {
     "key": "Projetos",
-    "url": "/projects/",
+    "url": "/artrenove-demo/projects/",
     "children": [
       {
         "key": "Projeto 1",
-        "url": "/projects/project-1/"
+        "url": "/artrenove-demo/projects/project-1/"
       },
       {
         "key": "Projeto 2",
-        "url": "/projects/project-2/"
+        "url": "/artrenove-demo/projects/project-2/"
       }
     ]
   },
   {
     "key": "Portfolio",
-    "url": "/blog",
+    "url": "/artrenove-demo/blog",
     "children": []
   },
    {
     "key": "Contato",
-    "url": "/blog",
+    "url": "/artrenove-demo/blog",
     "children": []
   },
   {
     "key": "Blog",
-    "url": "/blog/",
+    "url": "/artrenove-demo/blog/",
     "children": []     
   }
 ]

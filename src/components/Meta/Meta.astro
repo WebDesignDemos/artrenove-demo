@@ -19,8 +19,8 @@ const { title = SITE.title, description = SITE.description, heroImage } = Astro.
 const localBusinessSchema = getLocalBusinessSchema(Astro.url.origin);
 const canonical = Astro.url.href;
 
-// Detect home page for special title formatting
-const isHomePage = Astro.url.pathname === "/";
+// Astro.BASE_URL is "/" locally and can be a subpath on GitHub Pages.
+const isHomePage = Astro.url.pathname.replace(/\/+$/, "") === import.meta.env.BASE_URL.replace(/\/+$/, "");
 
 // Format page title with business name (and location if home page)
 const pageTitle = isHomePage ? `${title} | ${BUSINESS.name} | ${BUSINESS.address.city}, ${BUSINESS.address.state}` : `${title} | ${BUSINESS.name}`;

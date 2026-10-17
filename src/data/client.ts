@@ -1,30 +1,30 @@
 // ===== SITE CONSTANTS =====
 export const SITE = {
-	title: "Premussi Pré Moldados",
-	tagline: "Pré Moldados de Qualidade para Construção Civil",
-	description: "Oferecemos produtos de qualidade para a construção civil. Comece a explorar e entre em contato com nossa equipe para obter o melhor serviço e confiabilidade.",
-	url: "https://www.yourwebsite.com",
-	author: "Premussi Team",
-	locale: "en",
+	title: "TArtrenove Marcenaria", //T antes é teste
+	tagline: "Marcenaria em Curitiba, Pinhais, São José do Pinhais, Piraquara",
+	description: "A Artrenove oferece serviços de marcenaria para atender às necessidades de cada ambiente. Entre em contato para conhecer as opções disponíveis e conversar sobre seu projeto.",
+	url: "https://webdesigndemos.github.io/artrenove-demo",
+	author: "Pico Web Design",
+	locale: "pt-BR",
 };
 
 // ===== BUSINESS INFO =====
 export const BUSINESS = {
 	name: SITE.title,
-	empresa: "Premusi",
-	email: "premussipremoldados@gmail.com",
-	phoneForTel: "4441997052684",
-	phoneFormatted: "(41) 98483-3158",
-	whatsApp: "41 98483-3158",
-	whatsAppUrl: "https://wa.me/5541984833158",
+	empresa: "Artrenove",
+	email: "artrenove@gmail.com",
+	phoneForTel: "041998004014",
+	phoneFormatted: "(41) 99800-4014",
+	whatsApp: "41 99800-4014",
+	whatsAppUrl: "https://wa.me/5541998004014",
 	logo: "/images/logos/logo.png",
 	horario: "Segunda - Sexta: 08:00 - 18:00",
 	address: {
-		lineOne: "R. Paulino Ferreira Belo,",
-		lineTwo: "nº 218",
-		city: "Guatupê",
+		lineOne: "R. Amor-Perfeito,",
+		lineTwo: "nº 0",
+		city: "Curitiba, São José dos Pinhais e Pinhais",
 		state: "PR",
-		zip: "83060-470",
+		zip: "83060-640",
 		mapLink: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d57628.40543644481!2d-49.160384020654305!3d-25.479176164187514!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dcf1753956cd43%3A0x98300618e8c639c3!2sMarcenaria%20Artrenove!5e0!3m2!1spt-BR!2sbr!4v1792178233212!5m2!1spt-BR!2sbr",
 	},
 	socials: {
@@ -41,7 +41,7 @@ export const SEO = {
 
 // ===== OPEN GRAPH DEFAULTS =====
 export const OG = {
-	locale: "en_US",
+	locale: "pt_BR",
 	image: "/assets/social.jpg", // Default fallback social image located in public/
 };
 
