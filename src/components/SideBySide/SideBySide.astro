@@ -1,0 +1,228 @@
+---
+import { Icon } from "astro-icon/components";
+// SideBySide component from index.astro (#sbs section)
+
+// Utils
+import { Picture } from "astro:assets";
+
+// Images
+import cabinets2 from "@assets/images/services/cabinets2.jpg";
+import construction from "@assets/images/services/construction.jpg";
+---
+
+<!-- Section Services -->
+
+<!-- ============================================ -->
+<!--                    Services                  -->
+<!-- ============================================ -->
+
+<section id="services-1354">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Serviços</span>
+            <h2 class="cs-title">Marcenaria sob medida para atender às necessidades do seu espaço</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3"><span class="cs-span">Móveis</span> sob Medida</h3>
+                </a>
+                <picture class="cs-background">
+                    <source src="https://images.unsplash.com/photo-1659930087003-2d64e33181f7?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D">
+                    <img decoding="async" src="https://images.unsplash.com/photo-1659930087003-2d64e33181f7?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="construction" width="305" height="305" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3"><span class="cs-span">Cozinhas</span> em MDF</h3>
+                </a>
+                <picture class="cs-background">
+                    <img decoding="async" src="https://images.unsplash.com/photo-1512916194211-3f2b7f5f7de3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="construction" width="305" height="305" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3"><span class="cs-span">Funcionalidade</span> para cada Ambiente</h3>
+                </a>
+                <picture class="cs-background">
+                    <img decoding="async" src="https://plus.unsplash.com/premium_photo-1664300494539-313eac2a6095?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="construction" width="305" height="305" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3"><span class="cs-span">Móveis</span> totalmente Customizados </h3>
+                </a>
+                <picture class="cs-background">
+                    <img decoding="async" src="https://images.unsplash.com/photo-1679797850019-3d0d8659a695?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="construction" width="305" height="305" aria-hidden="true">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+<!-- Modificado max-width da .cs-container para var(--containerWidth) -->
+<!-- Modificado gap da .cs-container para var(--sectionGap) -->
+<!-- Modificado color da .cs-topper para var(--primary) -->
+<!-- Modificado background-color da .cs-item para var(--secondaryDark) -->
+<!-- Modificado border-radius da .cs-item para var(--cardRadius) com fallback -->
+<!-- Modificado box-shadow da .cs-item para var(--cardShadow) -->
+<!-- Modificado line-height da .cs-h3 para var(--lineHeightHeading) -->
+<!-- Modificado background-color do overlay .cs-background:before para var(--backgroundDark) -->                                
+<style lang="less">
+
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-1354 {
+        padding: var(--sectionPadding);
+        position: relative;
+        z-index: 10;
+    }
+    #services-1354 .cs-container {
+        width: 100%;
+        max-width: var(--containerWidth, 78rem);
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: var(--sectionGap, clamp(3rem, 6vw, 4rem));
+    }
+    #services-1354 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+    }
+
+    #services-1354 .cs-topper {
+        color: var(--primary, #A36626);
+    }
+    #services-1354 .cs-title {
+        max-width: 25ch;
+        margin: 0;
+    }
+    #services-1354 .cs-card-group {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+    }
+    #services-1354 .cs-item {
+        text-align: center;
+        list-style: none;
+        width: 100%;
+        height: 19.0625rem;
+        margin: 0;
+        padding: 0;
+        background-color: var(--secondaryDark, #2C1E16);
+        border-radius: var(--cardRadius, 0.25rem);
+        /* clips background image corners */
+        overflow: hidden;
+        box-shadow: var(--cardShadow, var(--shadow-soft));
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        grid-column: span 12;
+        grid-row: span 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        position: relative;
+        z-index: 1;
+    }
+    #services-1354 .cs-item:hover .cs-background:before {
+        background-color: var(--primary, #A36626);
+        opacity: 0.84;
+    }
+    #services-1354 .cs-item:hover .cs-background img {
+        transform: scale(1.2);
+    }
+    #services-1354 .cs-link {
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        /* padding goes on the link, not the cs-item as is normal. We do this because we want the whole card to be hoverable. So we add the padding to the link tag to create the space inside the card. By adding the space inside the cs-link tag we can make the whole card hoverable since the padding is now contributing to the height and widht of the link */
+        padding: 1.5rem;
+        /* prevents padding from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #services-1354 .cs-h3 {
+        font-size: 1.5625rem;
+        line-height: var(--lineHeightHeading, 1.2);
+        font-weight: bold;
+        text-align: inherit;
+        margin: 0;
+        color: var(--bodyTextColorWhite, #FFFFFF);
+        transition: color 0.3s;
+    }
+    #services-1354 .cs-span {
+        /* forces the h3 to alwasy be two lines */
+        display: block;
+    }
+    #services-1354 .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    #services-1354 .cs-background:before {
+        /* background color overlay */
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-color: var(--backgroundDark, #2C1E16);
+        opacity: 0.4;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transition:
+            background-color 0.3s,
+            opacity 0.3s;
+    }
+    #services-1354 .cs-background img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /* Makes img tag act as a background image */
+        object-fit: cover;
+        transition: transform 0.6s;
+    }
+}
+/* Tablet - 600px */
+@media only screen and (min-width: 37.5rem) {
+    #services-1354 .cs-item {
+        grid-column: span 6;
+    }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #services-1354 .cs-content {
+        text-align: left;
+        align-items: flex-start;
+    }
+    #services-1354 .cs-item {
+        grid-column: span 3;
+    }
+}
+
+</style>

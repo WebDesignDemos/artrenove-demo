@@ -1,0 +1,442 @@
+/*-- -------------------------- -->
+<---         CSS Reset          -->
+<--- -------------------------- -*/
+
+/* Modern CSS Reset - Based on Josh Comeau's reset */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+	margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		interpolate-size: allow-keywords;
+	}
+}
+
+body {
+	/* 4. Add accessible line-height - Eu mudei */
+	line-height: var(--lineHeightBody); //puxado de :root global
+	/* 5. Improve text rendering */
+	-webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+
+/* 9. Improve line wrapping */
+p {
+	text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+	text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+	isolation: isolate;
+}
+
+/*-- -------------------------- -->
+<---       CSS Variables Globals       -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0em) {
+	:root {
+		/* Colors */
+		--primary: #A36626; /* Cor principal da marca, usada em destaques */
+		--primaryLight: #E0A05A; /* Versao clara da cor principal */
+		--primaryDark: #6E4114; /* Versao escura da cor principal */
+
+		--secondary: #2C1E16; /* Cor secundaria, boa para botoes e secoes escuras */
+		--secondaryLight: #4A3528; /* Versao clara da cor secundaria */
+		--secondaryDark: #1A110C; /* Versao escura da cor secundaria */
+
+		--accent: #C77A28; /* Cor de apoio para detalhes e chamadas visuais */
+		--accentLight: #F0B86E; /* Versao clara da cor de apoio */
+		--accentDark: #8F5213; /* Versao escura da cor de apoio */
+
+		/* Backgrounds */
+		--background: #F8F5F0; /* Creme claro orgânico/papel artesanal suave */
+		--backgroundAlt: #FFFFFF; /* Branco puro para intercalar seções */
+		--backgroundDark: #1F1510; /* Fundo escuro terroso de alto contraste */
+
+		--surfaceColor: #FFFFFF; /* Cards claros sobre fundo off-white */
+		--surfaceAltColor: #F2EDE4; /* Superfície levemente aquecida */
+		--surfaceDarkColor: #2C1E16; /* Cards em áreas escuras */
+
+		/* Text colors */
+		--headerColor: #231812; /* Titulares escuros com base terrosa */
+		--bodyTextColor: #54473E; /* Texto de corpo leitura macia e alto contraste */
+		--mutedTextColor: #827368; /* Texto secundário e legendas */
+		--bodyTextColorWhite: #F8F5F0; /* Texto claro para seções escuras */
+
+		/* Text sizes */
+		--headerFontSize: clamp(2.125rem, 4.5vw, 3.75rem); /* Tamanho padrao de titulos grandes */
+		--bodyFontSize: 1rem; /* Tamanho do paragrafo */
+		--smallFontSize: 0.875rem; /* Tamanho de labels, badges e textos pequenos */
+
+		/* Text heights */
+		--lineHeightHeading: 1.2; /* Altura de linha dos titulos */
+		--lineHeightBody: 1.6; /* Minimo é 1.5. Altura de linha do texto comum p*/
+
+
+				
+		/* Padding das seções */
+		--sectionPadding: clamp(3.75rem, 7vw, 6.25rem) 1rem; /* Padding vertical das secoes */
+		
+
+
+		
+        
+		/* Layout */
+		--containerWidth: 80rem;
+		--containerPadding: 1rem;
+		--sectionGap: clamp(2rem, 4vw, 3.5rem);
+
+		/* Spacing */
+		--space-xs: 0.5rem;
+		--space-sm: 0.75rem;
+		--space-md: 1rem;
+		--space-lg: 1.5rem;
+		--space-xl: 2rem;
+		--space-2xl: 3rem;
+		--space-3xl: 4.5rem;
+
+		/* Radius (Estrutura firme e precisa de marcenaria: cantos quase retos/sutis) */
+		--radius-xs: 0.125rem;
+		--radius-sm: 0.25rem;
+		--radius-md: 0.375rem;
+		--radius-lg: 0.5rem;
+		--radius-xl: 0.75rem;
+		--radius-pill: 999px;
+
+		--buttonRadius: var(--radius-xs);
+		--cardRadius: var(--radius-sm);
+		--inputRadius: var(--radius-xs);
+		--avatarRadius: var(--radius-pill);
+
+		/* Borders Colors */
+		--borderColor: rgba(74, 53, 40, 0.12);
+		--borderColorLight: rgba(248, 245, 240, 0.15);
+		--border-subtle: 1px solid var(--borderColor);
+		--border-strong: 1px solid rgba(74, 53, 40, 0.28);
+
+		/* Shadows */
+		--shadow-xs: 0 2px 6px rgba(35, 24, 18, 0.04);
+		--shadow-soft: 0 8px 24px rgba(35, 24, 18, 0.06);
+		--shadow-medium: 0 16px 36px rgba(35, 24, 18, 0.09);
+		--shadow-strong: 0 24px 50px rgba(35, 24, 18, 0.14);
+
+		/* Cards */
+		--cardBackground: var(--surfaceColor);
+		--cardBackgroundAlt: var(--surfaceAltColor);
+		--cardBackgroundDark: var(--surfaceDarkColor);
+		--cardTextDark: var(--bodyTextColorWhite);
+		--cardMutedTextDark: rgba(248, 245, 240, 0.75);
+		--cardPadding: clamp(1.5rem, 3vw, 2.5rem);
+		--cardBorder: var(--border-subtle);
+
+
+		/* Images */
+		--imageRadius: var(--radius-sm);
+		--imageShadow: var(--shadow-soft);
+		--imageOverlay: rgba(31, 21, 16, 0.45);
+
+		}
+}
+
+/*-- -------------------------- -->
+<---     Base Element Styles    -->
+<--- -------------------------- -*/
+
+body,
+html {
+	font-family: var(--font-primary);
+	font-size: 100%;
+	color: var(--bodyTextColor);
+}
+
+body {
+	transition: background-color 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--headerColor);
+}
+
+p, li, a {
+	font-size: var(--bodyFontSize, 1rem);
+	line-height: var(--lineHeightBody, 1.55em);
+}
+
+p, li {
+	color: var(--bodyTextColor);
+}
+
+a, button {
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+
+
+/*-- -------------------------- -->
+<---   Typography Helpers       -->
+<--- -------------------------- -*/
+
+// Text styles - can be replaced using CodeStitch's "Content Flair" Stitches
+
+//estilo para o badget acima dos titulos, usado em h2 e h3
+.cs-topper {
+  font-size: 0.8125rem; 
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--primaryDark);
+  background: rgba(163, 102, 38, 0.12);
+  padding: 0.35rem 0.85rem;
+  border: 1px solid rgba(163, 102, 38, 0.25);
+  border-radius: var(--radius-xs); /* Cantos levemente suavizados, estilo marcenaria */
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+  width: fit-content;
+}
+
+/* Variação para seções com fundo escuro (Dark Backgrounds) */
+.cs-dark .cs-topper,
+[data-theme="dark"] .cs-topper {
+  color: var(--primaryLight);
+  background: rgba(224, 160, 90, 0.15);
+  border-color: rgba(224, 160, 90, 0.35);
+}
+
+//estilo para os titulos principais, usado em h1, h2 e h3
+.cs-title {
+	font-size: var(--headerFontSize);
+	font-weight: 900;
+	line-height: var(--lineHeightHeading, 1.2em);
+	margin: 0 auto (16/16rem);
+	color: var(--headerColor);
+	position: relative;
+}
+//certos paragrafos sim, outros não, porque?
+.cs-text {
+	font-size: var(--bodyFontSize, 1rem);
+	line-height: var(--lineHeightBody, 1.55em);
+	width: 100%;
+	margin: 0 auto;
+	color: var(--bodyTextColor);
+}
+
+
+
+/*-- -------------------------- -->
+<---    Component Classes       -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0em) {
+	// Button - can be replaced using CodeStitch's "Button" Stitches
+	/* Base Button - Regras estruturais */
+	.cs-button {
+	font-family: 'Urbanist', sans-serif;
+	font-size: 0.9375rem;
+	font-weight: 700;
+	height: 3.125rem;
+	padding: 0 2rem;
+	border-radius: 0.125rem; /* Bordas retas e lapidadas, remetendo a cortes de madeira */
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+	overflow: hidden; 
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	text-decoration: none;
+	border: none;
+	cursor: pointer;
+	
+	/* Uso de variáveis locais ligadas ao sistema com fallback em HEX */
+	background-color: var(--btn-bg, var(--primary, #A36626));
+	color: var(--btn-text, #FFFFFF);
+	transition: color 0.3s ease;
+	transition-delay: 0.05s;
+	}
+
+	/* Animação do Background no Hover */
+	.cs-button::before {
+	content: "";
+	width: 0;
+	height: 100%;
+	background-color: var(--btn-hover-bg, var(--primaryDark, #6E4114));
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transition: width 0.3s ease-in-out;
+	}
+
+	.cs-button:hover {
+	color: var(--btn-hover-text, #FFFFFF);
+	}
+
+	.cs-button:hover::before {
+	width: 100%;
+	}
+
+	/* Modificadores de Cor (Variáveis do sistema com fallback HEX) */
+	.cs-button-custom {
+	--btn-bg: var(--primary, #A36626);
+	--btn-text: #FFFFFF;
+	--btn-hover-bg: var(--primaryDark, #6E4114);
+	--btn-hover-text: #FFFFFF;
+	}
+
+	.cs-button-light {
+	--btn-bg: #FFFFFF;
+	--btn-text: var(--headerColor, #231812);
+	--btn-hover-bg: var(--primary, #A36626);
+	--btn-hover-text: #FFFFFF;
+	border: 1px solid var(--secondaryLight, #4A3528);
+	}
+
+	.cs-button-dark {
+	--btn-bg: var(--secondary, #2C1E16);
+	--btn-text: #FFFFFF;
+	--btn-hover-bg: var(--primary, #A36626);
+	--btn-hover-text: #FFFFFF;
+	}
+
+
+
+
+
+
+	.container {
+		width: 92%;
+		margin: auto;
+		position: relative;
+	}
+
+	// Skip to main content link - accessible to keyboard users and screen readers
+	.skip {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translateY(-100%);
+		z-index: 10001; // Above header (10000)
+		opacity: 0;
+		overflow: hidden;
+		transition:
+			transform 0.3s,
+			opacity 0.3s;
+
+		&:focus {
+			transform: translateY(0);
+			opacity: 1;
+			padding: 1rem 1.5rem;
+			background-color: var(--primary);
+			color: var(--headerColor);
+			text-decoration: none;
+			font-weight: 700;
+			outline: 2px solid var(--primary);
+			outline-offset: 2px;
+		}
+	}
+}
+
+
+
+/*-- -------------------------- -->
+<---      Utility Classes       -->
+<--- -------------------------- -*/
+
+// prevents icons from shrinking in flex containers
+[data-icon] {
+	flex-shrink: 0;
+}
+
+.cs-hide-on-mobile {
+	display: none;
+}
+
+.cs-hide-on-desktop {
+	display: block;
+}
+
+
+
+/*-- -------------------------- -->
+<---   Responsive Adjustments   -->
+<--- -------------------------- -*/
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+	.cs-hide-on-mobile {
+		display: block;
+	}
+
+	.cs-hide-on-desktop {
+		display: none;
+	}
+}
+
+/* Scale full website with the viewport width */
+@media only screen and (min-width: 2000px) {
+	body,
+	html {
+		font-size: 0.85vw;
+	}
+}
+
+
+
+
+
+
+
+

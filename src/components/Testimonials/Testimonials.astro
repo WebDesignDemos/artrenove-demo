@@ -1,0 +1,268 @@
+---
+// Utils
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+
+// Data
+import profile5 from "@assets/images/testimonials/profile5.png";
+import profile4 from "@assets/images/testimonials/profile-4.png";
+
+import { BUSINESS } from "@data/client";
+---
+
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-66">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Depoimentos</span>
+            <h2 class="cs-title">Opinião de Nossos Clientes</h2>
+            <p class="cs-text">
+                Conheça melhor o trabalho da Artrenove e descubra como a marcenaria pode contribuir para ambientes mais funcionais. Em breve, este espaço poderá reunir avaliações reais de clientes e suas experiências com os serviços realizados.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile1.png" alt="profile" width="68" height="68">
+                <span class="cs-name">Cliente 1</span>
+                <span class="cs-desc">Curitiba</span>
+                <p class="cs-item-text">
+                    Espaço reservado para compartilhar uma avaliação real sobre a experiência com os serviços de marcenaria da Artrenove.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile2.png" alt="profile" width="68" height="68">
+                <span class="cs-name">Cliente 2</span>
+                <span class="cs-desc">Curitiba</span>
+                <p class="cs-item-text">
+                    Espaço reservado para compartilhar uma avaliação real sobre a experiência com os serviços de marcenaria da Artrenove.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile3.png" alt="profile" width="68" height="68">
+                <span class="cs-name">Cliente 3</span>
+                <span class="cs-desc">Curitiba</span>
+                <p class="cs-item-text">
+                    Espaço reservado para compartilhar uma avaliação real sobre a experiência com os serviços de marcenaria da Artrenove.
+                </p>
+            </li>
+        </ul>
+        <a aria-label="read more reviews" href="" class="cs-button-solid">Saiba Mais</a>
+    </div>
+    <!-- Background Image -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Reviews/ladder-m.jpg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Reviews/ladder.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/ladder.jpg" alt="ladder" width="1125" height="750" aria-hidden="true">
+    </picture>
+</section>
+
+
+<!-- Modificado max-width da .cs-container para var(--containerWidth) -->
+<!-- Modificado gap da .cs-container para var(--sectionGap) -->
+<!-- Modificado background-color da .cs-item para var(--surfaceColor) com fallback HEX -->
+<!-- Modificado border-radius e padding da .cs-item para var(--cardRadius) e var(--cardPadding) -->
+<!-- Modificado box-shadow da .cs-item para var(--cardShadow) -->
+<!-- Modificado border-radius do avatar .cs-img para var(--avatarRadius) -->
+<!-- Modificado line-height do nome .cs-name e subtítulo .cs-desc para var(--lineHeightHeading) -->
+<!-- Modificado color da .cs-desc para var(--mutedTextColor) com fallback HEX -->
+<!-- Modificado line-height do texto .cs-item-text para var(--lineHeightBody) -->
+<!-- Modificado background-color, color, border-radius e padding do botão .cs-button-solid para as variáveis globais de botão -->
+<!-- Modificado background-color do overlay .cs-background:before para var(--backgroundDark) -->
+<style lang="less">
+
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+
+    #reviews-66 {
+        padding: var(--sectionPadding);
+        position: relative;
+    }
+    #reviews-66 .cs-container {
+        width: 100%;
+        max-width: var(--containerWidth, 78rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: var(--sectionGap, clamp(3rem, 6vw, 4rem));
+    }
+    #reviews-66 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+    }
+
+    #reviews-66 .cs-title {
+        color: var(--bodyTextColorWhite, #FAFBFC);
+    }
+    #reviews-66 .cs-text {
+        color: var(--bodyTextColorWhite, #FAFBFC);
+        opacity: 0.8;
+    }
+    #reviews-66 .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* changes to a clamp at tablet */
+        gap: 2.875rem;
+    }
+
+        #reviews-66 .cs-topper{
+        color: #FAFBFC;
+    }
+
+
+    #reviews-66 .cs-item {
+        list-style: none;
+        text-align: center;
+        width: 100%;
+        max-width: 22.125rem;
+        padding: var(--cardPadding, clamp(1.5rem, 3vw, 2.5rem));
+        margin: 0;
+        background-color: var(--surfaceColor, #FAFEF6);
+        border-radius: var(--cardRadius, 0.25rem);
+        box-shadow: var(--cardShadow, var(--shadow-soft));
+        /* prevent padding from adding to the height and width */
+        box-sizing: border-box;
+    }
+    #reviews-66 .cs-img {
+        margin: 0 auto 1rem;
+        width: 4.25rem;
+        height: 4.25rem;
+        border-radius: var(--avatarRadius, 999px);
+        display: block;
+        transform: translateY(-1.75rem);
+    }
+    #reviews-66 .cs-name {
+        font-size: 1.25rem;
+        line-height: var(--lineHeightHeading, 1.2);
+        text-align: center;
+        font-weight: 700;
+        margin: 0;
+        color: var(--headerColor);
+        display: block;
+    }
+    #reviews-66 .cs-desc {
+        font-size: 1rem;
+        line-height: var(--lineHeightHeading, 1.2);
+        text-align: center;
+        margin: 0 0 1rem;
+        color: var(--mutedTextColor, #8A8A8D);
+        display: block;
+    }
+    #reviews-66 .cs-item-text {
+        font-size: 1rem;
+        line-height: var(--lineHeightBody, 1.55);
+        max-width: 17.5rem;
+        margin: auto;
+        color: var(--bodyTextColor);
+    }
+    #reviews-66 .cs-button-solid {
+        font-family: 'Urbanist', sans-serif;
+        font-size: 1rem;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: var(--buttonPrimaryText, #FFFFFF);
+        min-width: 9.375rem;
+        padding: var(--buttonPadding, 0 2rem);
+        background-color: var(--buttonPrimaryBg, var(--primary, #A36626));
+        border-radius: var(--buttonRadius, 0.125rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        transition: color 0.3s;
+    }
+    #reviews-66 .cs-button-solid:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background-color: var(--primaryDark, #6E4114);
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: var(--buttonRadius, 0.125rem);
+        transition: width 0.3s ease-in-out;
+    }
+    #reviews-66 .cs-button-solid:hover {
+        color: var(--buttonPrimaryHoverText, #FFFFFF);
+    }
+    #reviews-66 .cs-button-solid:hover:before {
+        width: 100%;
+    }
+    #reviews-66 .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    #reviews-66 .cs-background:before {
+        /* background color overlay */
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-color: var(--backgroundDark, #0F172A);
+        opacity: 0.7;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    #reviews-66 .cs-background img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /* Makes img tag act as a background image */
+        object-fit: cover;
+    }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #reviews-66 .cs-card-group {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+        /* 16px - 20px */
+        column-gap: clamp(1rem, 1.5vw, 1.25rem);
+        row-gap: 2.875rem;
+    }
+    #reviews-66 .cs-item {
+        width: clamp(31.5%, 30vw, 32.3%);
+    }
+}
+
+</style>

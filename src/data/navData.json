@@ -1,0 +1,41 @@
+[
+  {
+    "key": "Home",
+    "url": "/",
+    "children": []
+  },
+  {
+    "key": "Sobre",
+    "url": "/blog",
+    "children": []
+  },
+  {
+    "key": "Projetos",
+    "url": "/projects/",
+    "children": [
+      {
+        "key": "Projeto 1",
+        "url": "/projects/project-1/"
+      },
+      {
+        "key": "Projeto 2",
+        "url": "/projects/project-2/"
+      }
+    ]
+  },
+  {
+    "key": "Portfolio",
+    "url": "/blog",
+    "children": []
+  },
+   {
+    "key": "Contato",
+    "url": "/blog",
+    "children": []
+  },
+  {
+    "key": "Blog",
+    "url": "/blog/",
+    "children": []     
+  }
+]

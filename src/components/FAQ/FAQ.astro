@@ -1,0 +1,359 @@
+---
+// No utils nor props for this component
+---
+
+
+<!-- ============================================ -->
+<!--                     FAQ                      -->
+<!-- ============================================ -->
+
+<section id="faq-2286">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture1">
+                <img loading="lazy" decoding="async" 
+                src="https://plus.unsplash.com/premium_photo-1682597001129-42e04d67253f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" 
+                alt="people outside" width="306" height="360" aria-hidden="true">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <img loading="lazy" decoding="async" 
+                src="https://images.unsplash.com/photo-1631396326646-c06a935ff3a6?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                 alt="people outside" width="306" height="360" aria-hidden="true">
+            </picture>
+            <picture class="cs-picture cs-picture3">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction14.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction14.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction14.jpg" alt="person gardening" width="306" height="360" aria-hidden="true">
+            </picture>
+            <picture class="cs-picture cs-picture4">
+                <img loading="lazy" decoding="async" 
+                src="https://images.unsplash.com/photo-1779031242515-205111711b23?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                 alt="urban environment in green" width="306" height="360" aria-hidden="true">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">FAQ</span>
+            <h2 class="cs-title">Dúvidas Frequentes sobre a Marcenaria</h2>
+            <ul class="cs-faq-group">
+                <!-- Active class added as default -->
+                <li class="cs-faq-item active">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            1. Quanto custa um serviço de marcenaria?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        O valor depende do tipo de móvel, das dimensões, dos materiais e dos detalhes do trabalho. Entre em contato conosco para apresentar sua necessidade e obter informações sobre o orçamento.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            2. Quais serviços de marcenaria estão disponíveis?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        Os serviços podem variar conforme o tipo de trabalho desejado. Entre em contato conosco para esclarecer sua necessidade e verificar as opções disponíveis para o seu projeto.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            3. Quanto tempo leva para ficar pronto um móvel?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        O prazo depende das características do móvel, dos materiais e da complexidade do serviço. Consulte-nos para obter informações sobre o prazo previsto para o trabalho que você deseja realizar.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            É possível adaptar os móveis ao espaço disponível?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        As dimensões e a configuração do móvel são fatores importantes na escolha de uma solução para cada ambiente. Entre em contato conosco para conversar sobre as características do espaço e suas necessidades.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            5. Como solicitar um orçamento de marcenaria?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        Entre em contato conosco e explique qual móvel ou serviço você procura. Compartilhe os detalhes da sua necessidade para facilitar a avaliação do trabalho e as orientações sobre o orçamento.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+
+<style lang="less">
+	
+/*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #faq-2286 {
+    padding: var(--sectionPadding);
+    position: relative;
+  }
+  #faq-2286 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 40px - 48px */
+    gap: clamp(2.5rem, 5vw, 3rem);
+  }
+  #faq-2286 .cs-content {
+    text-align: left;
+    max-width: 33.875rem;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+  }
+  #faq-2286 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 33.875rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #faq-2286 .cs-title {
+    /* 20 characters wide including spaces */
+    max-width: 20ch;
+    margin: 0 auto 2rem 0;
+  }
+  #faq-2286 .cs-faq-group {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #faq-2286 .cs-faq-item {
+    list-style: none;
+    width: 100%;
+    border-bottom: 1px solid #e8e8e8;
+    transition: border-bottom 0.3s;
+  }
+  #faq-2286 .cs-faq-item.active {
+    border-bottom: 4px solid var(--primary);
+  }
+  #faq-2286 .cs-faq-item.active .cs-button {
+    color: var(--primary);
+  }
+  #faq-2286 .cs-faq-item.active .cs-button .cs-indicator:before {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  #faq-2286 .cs-faq-item.active .cs-button .cs-indicator:after {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  #faq-2286 .cs-faq-item.active .cs-item-p {
+    height: auto;
+    /* 20px - 24px bottom */
+    padding: 0 0 clamp(1rem, 2vw, 1.5rem) 0;
+    opacity: 1;
+  }
+  #faq-2286 .cs-button {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.2em;
+    text-align: left;
+    font-weight: bold;
+    /* 16px - 24px */
+    padding: clamp(1rem, 2.3vw, 1.5rem) 0;
+    border: none;
+    background: transparent;
+    color: var(--headerColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  #faq-2286 .cs-button:hover {
+    cursor: pointer;
+  }
+  #faq-2286 .cs-button .cs-indicator {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  #faq-2286 .cs-button .cs-indicator:before {
+    /* left line */
+    content: '';
+    width: 0.75rem;
+    height: 0.125rem;
+    background-color: #585B5D;
+    opacity: 1;
+    border-radius: 2px;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s;
+  }
+  #faq-2286 .cs-button .cs-indicator:after {
+    /* right line */
+    content: '';
+    width: 0.75rem;
+    height: 0.125rem;
+    background-color: #585B5D;
+    opacity: 1;
+    border-radius: 2px;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    transition: transform 0.5s;
+  }
+  #faq-2286 .cs-button-text {
+    width: 90%;
+    display: block;
+  }
+  #faq-2286 .cs-item-p {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    width: 90%;
+    max-width: 33.8125rem;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    color: var(--bodyTextColor);
+    /* clips the text so it doesn't show up */
+    overflow: hidden;
+    transition: opacity 0.3s, padding-bottom 0.3s;
+  }
+  #faq-2286 .cs-image-group {
+    /* everything inside the image group is in ems so the font size will scale them down.  Font size minimum is tied to view width size, and grows until it reaches 86% of the value on em */
+    font-size: min(2.3vw, .86rem);
+    width: 39.375em;
+    height: 37.8125em;
+    position: relative;
+    z-index: 1;
+  }
+  #faq-2286 .cs-picture {
+    overflow: hidden;
+    display: block;
+    position: absolute;
+  }
+  #faq-2286 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #faq-2286 .cs-picture1 {
+    width: 19.0625em;
+    height: 25.3125em;
+    top: 0;
+    left: 0;
+  }
+  #faq-2286 .cs-picture2 {
+    width: 19.0625em;
+    height: 11.25em;
+    top: 0;
+    right: 0;
+  }
+  #faq-2286 .cs-picture3 {
+    width: 19.0625em;
+    height: 11.25em;
+    bottom: 0;
+    left: 0;
+  }
+  #faq-2286 .cs-picture4 {
+    width: 19.0625em;
+    height: 25.3125em;
+    bottom: 0;
+    right: 0;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #faq-2286 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  #faq-2286 .cs-content {
+    width: 55%;
+    max-width: 33.125rem;
+    padding: 0;
+  }
+  #faq-2286 .cs-image-group {
+    font-size: inherit;
+    width: 45vw;
+    max-width: 39.375rem;
+    min-height: 28.875rem;
+    order: 2;
+    flex: none;
+  }
+  #faq-2286 .cs-picture1 {
+    width: auto;
+    margin-right: 0.625em;
+    right: 50%;
+  }
+  #faq-2286 .cs-picture2 {
+    width: auto;
+    margin-left: 0.625em;
+    left: 50%;
+  }
+  #faq-2286 .cs-picture3 {
+    width: auto;
+    margin-right: 0.625em;
+    right: 50%;
+  }
+  #faq-2286 .cs-picture4 {
+    width: auto;
+    margin-left: 0.625em;
+    left: 50%;
+  }
+}
+
+</style>
+
+<script>
+	// Paste the JS inside Astro:page-load wrapper for View Transitions purposes
+	document.addEventListener("astro:page-load", () => {
+
+		const faqItems = Array.from(document.querySelectorAll(".cs-faq-item"));
+		for (const item of faqItems) {
+			const onClick = () => {
+				item.classList.toggle("active");
+			};
+			item.addEventListener("click", onClick);
+		}
+    
+	});
+</script>
